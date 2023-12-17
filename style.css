@@ -1,67 +1,109 @@
 body{
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
 }
 
-main{
-    width: 900px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
+.align-items{
     align-items: center;
+}
+
+.justify-content{
+    justify-content: center;
+}
+
+.column{
+    flex-direction: column;
 }
 
 .flex{
     display: flex;
 }
 
-.form{
-    width: 100%;
-}
-
-.task-text{
-    width: 100%;
-    justify-content: center;
-}
-
-.task-text input{
-    width: 90%;
-    height: 40px;
-
-}
-
-.dates-priorities{
-    margin-top: 10px;
+.around{
     justify-content: space-around;
-
 }
 
-.final-date{
-    margin-left: 10px;
+main{
+    width: 90%;
+    margin: auto;
+    height: 100%;
 }
 
-.btn-add{
-    margin-top: 10px;
-    justify-content: end;
+article{
+    height: 100%;
 }
 
-.btn-add button{
-    margin-right: 40px;
-    padding: 10px;
-    width: 10%;
-    background-color: rgb(76, 158, 76);
+section{
+    position: relative;
+    margin: auto;
+    height: 170px;
+    width: 50%;
+    background-color: #fff;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+    
+}
+
+#input-task-text{
+    width: 100%;
+}
+
+#input-task-text input{
+    box-sizing: border-box;
+    width: 100%;
+    height: 50px;
     border: none;
-    color: white;
+    padding: 0 0 0 10px;
+    outline: none;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    border-radius: 5px 5px 0 0;   
+}
+
+#input-task-text input:focus{
+    border-bottom: 1px solid #000;
+}
+
+.prioridad{
+    padding: 0;
+    margin: 0;
+}
+
+
+
+#btn-add-task{
+    position: absolute;
+    right: 2%;
+    bottom: 5%;
+    background-color: #0b5ed7;
+    padding: 10px;
+    width: 100px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#btn-add-task:hover{
+    background-color: #0b5ed7;
+    opacity: 0.8;
+}
+
+#open-close{
+    position: relative;
+    margin: auto;
+    width: 50%;
     border-radius: 5px;
 }
 
-#add-task{
-    width: 90%;
-    display: flex;
-    justify-content: end;
+#open-close img{
+    cursor: pointer;
+}
+
+
+#form-add-task{
+    display: none;
 }

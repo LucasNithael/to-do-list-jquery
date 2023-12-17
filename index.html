@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,76 +10,66 @@
 
 </head>
 <body>
+    <header>
+        <h1 class="flex justify-content align-items">To-do List</h1>
+    </header>
     <main>
-        <h1>To-do list</h1>
-        
-        <div id="add-task">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
-                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
-              </svg>
-
-        </div>
-        <div class="form">
-            <div class="task-text flex">
-                
-                <input type="text" placeholder="digite sua tarefa">
-
+        <article class="around">
+            <div id="open-close">
+                <img src="svg/open.svg" alt="">
             </div>
 
-            <div class="dates-priorities flex">
-
-                <div class="dates flex">
-    
-                    <div class="initial-date ">
-        
-                        <label for="initial-date">Início</label>
-                        <input type="datetime-local" name="initial-date" id="initial-date">
-        
-                    </div>
-        
-                    <div class="final-date">
-        
-                        <label for="final-date">Fim</label>
-                        <input type="datetime-local" name="final-date" id="final-date">
-        
-                    </div>
-    
-                </div>
-    
-                <div class="priorities">
-                    Nível de prioridade
-                    <label>
-                        <input type="radio" name="prioridad" value="1">1
-                    </label>
-                    <label>
-                        <input type="radio" name="prioridad" value="2">2
-                    </label>
-                    <label>
-                        <input type="radio" name="prioridad" value="3">3
-                    </label>
-                    <label>
-                        <input type="radio" name="prioridad" value="4">4
-                    </label>
-                    <label>
-                        <input type="radio" name="prioridad" value="5">5
-                    </label>
+            <section id="form-add-task">
+                <div id="input-task-text">
+                    <input type="text" placeholder="Type your task here">
                 </div>
 
-            </div>
+                <div class="time flex align-items around">
+                    <div class="flex column">
+                        <label for="beginnig">beginnig</label>
+                        <input type="datetime-local" name="beginnig" id="beginnig">
+                    </div>
+                    <div class="flex column">
+                        <label for="end">end</label>
+                        <input type="datetime-local" name="end" id="end">
+                    </div>
 
-            <div class="btn-add flex">
+                    <div class="priorities">
+                        <p class="prioridad">
+                            level
+                        </p>
+                            <input type="radio" name="prioridad" value="1">1
+                        </label>
+                        <label>
+                            <input type="radio" name="prioridad" value="2">2
+                        </label>
+                        <label>
+                            <input type="radio" name="prioridad" value="3">3
+                        </label>
+                        <label>
+                            <input type="radio" name="prioridad" value="4">4
+                        </label>
+                        <label>
+                            <input type="radio" name="prioridad" value="5">5
+                        </label>
+                    </div>
+
+                    
+
+                </div>
+
                 
-                <button type="submit">Adicionar</button>
+                <button id="btn-add-task">add</button>
+                
 
-            </div>
-        </div>
-
-        <div class="contetn">
-
-        </div>
-        
+            </section>
+            <section></section>
+            <section></section>
+            <section></section>
+            <section></section>
+        </article>
     </main>
+    
     
 </body>
 
