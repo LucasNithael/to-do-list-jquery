@@ -19,14 +19,26 @@ $(document).ready(function(){
     $('#btn-add-task').click(function(){
         text = $('#input-task-text input').val();
         time = deadlineFn($('#deadline').val())
-        priority = $('input[name="prioridad"]:checked').val();
+        level = $('input[name="prioridad"]:checked').val();
 
-        console.log(time)
+        $('article').append(makeTask(text, time, level))
 
     })
 
     function makeTask(text, time, priority){
-        section = `<section></section>`;
+        section = `
+        <section>
+                <div class="text-task">${text}</div>
+                <div class="tiem-level flex around">
+                    <P>${time}h left</P>
+                    <p>level ${level}</p>
+                </div>
+
+        </section>
+        
+        `;
+
+        return section;
     }
 
     function deadlineFn(time){
