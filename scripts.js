@@ -1,25 +1,6 @@
 $(document).ready(function(){
-
-    $('#add-task svg').mouseenter(function(){
-        
-        $(this).css({
-            'cursor': 'pointer',
-            'background': 'lightgray'
-        });
-
-
-    });
-
-
-    $('#add-task svg').mouseout(function(){
-        
-        $(this).css({
-            'cursor': 'pointer',
-            'background': 'white'
-        });
-
-
-    });
+    // load task local
+    //loadTasks();
 
     $('#add-task svg').click(function(){    
         $('.form').toggle('slow');
@@ -28,19 +9,38 @@ $(document).ready(function(){
 
     $('#open-close img').click(function(){    
         $('#form-add-task').toggle('slow');
-        var $formAddTask = $('#form-add-task');
-        var $img = $(this);
-
-        // Verifica o atributo src atual
-        if ($img.attr('src') === 'svg/open.svg') {
-            // Se for o SVG 'open.svg', altera para 'close.svg'
-            $img.attr('src', 'svg/close.svg');
-            $formAddTask.slideDown('slow');  // Ou use toggle se preferir
+        if ($(this).attr('src') === 'svg/open.svg') {
+            $(this).attr('src', 'svg/close.svg');
         } else {
-            // Se for o SVG 'close.svg', altera para 'open.svg'
-            $img.attr('src', 'svg/open.svg');
-            $formAddTask.slideUp('slow');  // Ou use toggle se preferir
+            $(this).attr('src', 'svg/open.svg');
         }
     })
+
+    $('#btn-add-task').click(function(){
+        text = $('#input-task-text input').val();
+        time = deadlineFn($('#deadline').val())
+        priority = $('input[name="prioridad"]:checked').val();
+
+        console.log(time)
+
+    })
+
+    function makeTask(text, time, priority){
+        section = `<section></section>`;
+    }
+
+    function deadlineFn(time){
+        deadline = new Date(time);
+
+        timenow  = new Date();
+
+        differenceMS = deadline - timenow;
+
+        differenceH = differenceMS / (1000 * 60 * 60);
+
+        return Math.floor(differenceH);
+
+        
+    }
     
 })
