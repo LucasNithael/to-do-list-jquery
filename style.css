@@ -44,8 +44,7 @@ article{
     height: 100%;
 }
 
-section{
-    position: relative;
+section, #form-add-task{
     margin: auto;
     height: 170px;
     width: 50%;
@@ -54,20 +53,14 @@ section{
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
     border: #bdbdbe 1px solid;
     padding: 10px;
+    box-sizing: border-box;
     
 }
 
 
 #form-add-task{
-    margin: auto;
     height: 50px;
-    width: 50%;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
-    border: #bdbdbe 1px solid;
-    padding: 10px;
-    box-sizing: border-box;
+
 }
 
 #input-task-text{
@@ -92,18 +85,19 @@ section{
 
 
 #btn-add-task{
-    background-color: #0b5ed7;
+    /* background-color: #0b5ed7;
     padding: 10px;
     width: 100px;
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 5px; */
     cursor: pointer;
+    height: 80%;
 }
 
 #btn-add-task:hover{
-    background-color: #0b5ed7;
-    opacity: 0.8;
+    /* background-color: #0b5ed7;
+    opacity: 0.8; */
 }
 
 #open-close{

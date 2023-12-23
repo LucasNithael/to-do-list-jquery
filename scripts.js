@@ -2,26 +2,29 @@ $(document).ready(function(){
     // load task local
     //loadTasks();
 
-    // $('#add-task svg').click(function(){    
-    //     $('.form').toggle('slow');
-    // });
-
-
-    // $('#open-close img').click(function(){    
-    //     $('#form-add-task').toggle('slow');
-    //     if ($(this).attr('src') === 'svg/open.svg') {
-    //         $(this).attr('src', 'svg/close.svg');
-    //     } else {
-    //         $(this).attr('src', 'svg/open.svg');
-    //     }
-    // })
-
     $('#btn-add-task').click(function(){
         text = $('#input-task-text input').val();
-        $('article').append(makeTask(text))
+
+        var sections = $('section');
+
+        for (const section of sections) {
+            var sectionText = $(section).find('.text-task').text();
+
+            if (sectionText == text) {
+                alert('Task already exists');
+                return false;
+            }
+        }
+
+        if (text == '') {
+            alert('taks is empty');
+        } 
+        else {
+            makeTask(text);
+        }
 
     })
-
+    
     function makeTask(text){
         section = `
         <section>
@@ -29,8 +32,8 @@ $(document).ready(function(){
         </section>
         
         `;
-
-        return section;
+        
+        $('article').children().first().after(section);
     }
     
 })
