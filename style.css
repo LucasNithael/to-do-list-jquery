@@ -1,7 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+
+*{
+    background-color: #202124;
+    color: #bdbdbe;
+    font-family: 'Roboto',Arial,sans-serif;
+
+}
+
 body{
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
     height: 100vh;
 }
 
@@ -40,11 +49,25 @@ section{
     margin: auto;
     height: 170px;
     width: 50%;
-    background-color: #F8F9FA;
     margin-bottom: 20px;
     border-radius: 5px;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+    border: #bdbdbe 1px solid;
+    padding: 10px;
     
+}
+
+
+#form-add-task{
+    margin: auto;
+    height: 50px;
+    width: 50%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+    border: #bdbdbe 1px solid;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 #input-task-text{
@@ -52,32 +75,23 @@ section{
 }
 
 #input-task-text input{
-    box-sizing: border-box;
+    height: 100%;
     width: 100%;
-    height: 50px;
     border: none;
     padding: 0 0 0 10px;
     outline: none;
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 10px;
-    border-radius: 5px 5px 0 0;   
+    border-radius: 5px 5px 0 0;
+    font-size: 18px;   
 }
 
-#input-task-text input:focus{
-    border-bottom: 1px solid #000;
-}
-
-.prioridad{
+/* .prioridad{
     padding: 0;
     margin: 0;
-}
+} */
 
 
 
 #btn-add-task{
-    position: absolute;
-    right: 2%;
-    bottom: 5%;
     background-color: #0b5ed7;
     padding: 10px;
     width: 100px;
@@ -93,16 +107,16 @@ section{
 }
 
 #open-close{
-    margin: auto;
-    width: 50%;
+    width: 100%;
     border-radius: 5px;
     justify-content: start;
 }
 
 #open-close img{
+    color: #bdbdbe;
     cursor: pointer;
 }
 
-#form-add-task{
+/* #form-add-task{
     display: none;
-}
+} */

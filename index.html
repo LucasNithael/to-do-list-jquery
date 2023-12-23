@@ -15,49 +15,23 @@
     </header>
     <main>
         <article class="around">
-            <div id="open-close" class="flex">
-                <img src="svg/open.svg" alt="">
-            </div>
+            <!-- <div id="open-close" class="flex justify-content align-items">
+                <div>
+                    <img src="svg/open.svg" alt="">
+                </div>
+            </div> -->
 
-            <section id="form-add-task">
+            <div id="form-add-task" class="flex justify-content align-items">
+
                 <div id="input-task-text">
                     <input type="text" placeholder="Type your task here">
                 </div>
-
-                <div class="time flex align-items around">
-                    <div class="flex column">
-                        <label for="deadline">deadline</label>
-                        <input type="datetime-local" name="deadline" id="deadline">
-                    </div>
-
-                    <div class="priorities">
-                        <p class="prioridad">
-                            level
-                        </p>
-                            <input type="radio" name="prioridad" value="1">1
-                        </label>
-                        <label>
-                            <input type="radio" name="prioridad" value="2">2
-                        </label>
-                        <label>
-                            <input type="radio" name="prioridad" value="3">3
-                        </label>
-                        <label>
-                            <input type="radio" name="prioridad" value="4">4
-                        </label>
-                        <label>
-                            <input type="radio" name="prioridad" value="5">5
-                        </label>
-                    </div>
-
-                    
+                
+                <div>
+                    <button id="btn-add-task">add</button>
                 </div>
 
-                
-                <button id="btn-add-task">add</button>
-                
-
-            </section>
+            </div>
             
 
         </article>
