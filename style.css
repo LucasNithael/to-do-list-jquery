@@ -77,27 +77,9 @@ section, #form-add-task{
     font-size: 18px;   
 }
 
-/* .prioridad{
-    padding: 0;
-    margin: 0;
-} */
-
-
-
 #btn-add-task{
-    /* background-color: #0b5ed7;
-    padding: 10px;
-    width: 100px;
-    color: #fff;
-    border: none;
-    border-radius: 5px; */
     cursor: pointer;
     height: 80%;
-}
-
-#btn-add-task:hover{
-    /* background-color: #0b5ed7;
-    opacity: 0.8; */
 }
 
 #open-close{
@@ -111,6 +93,14 @@ section, #form-add-task{
     cursor: pointer;
 }
 
-/* #form-add-task{
-    display: none;
-} */
+.task-section{
+    position: relative;
+}
+
+.time-task{
+    position: absolute;
+    bottom: 5%;
+    right: 2%;
+    /* font-size: 12px; */
+    color: #bdbdbe;
+}

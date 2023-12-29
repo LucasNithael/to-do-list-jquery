@@ -26,9 +26,14 @@ $(document).ready(function(){
     })
     
     function makeTask(text){
+        time = new Date();
+        // quero o dia e a hora
+        time = time.toLocaleString();
+
         section = `
-        <section>
-            <div class="text-task">${text}</div>
+        <section class="task-section">
+            <p class="text-task">${text}</p>
+            <div class="time-task">${time}</div>
         </section>
         
         `;
