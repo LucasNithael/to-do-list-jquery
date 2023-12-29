@@ -104,3 +104,18 @@ section, #form-add-task{
     /* font-size: 12px; */
     color: #bdbdbe;
 }
+
+
+.trash-task{
+    position: absolute;
+    bottom: 5%;
+    left: 2%;
+    cursor: pointer;
+}
+
+.edit-task{
+    position: absolute;
+    bottom: 5%;
+    left: 7%;
+    cursor: pointer;
+}
