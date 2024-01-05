@@ -106,7 +106,7 @@ section, #form-add-task{
 }
 
 
-.trash-task{
+.done-task{
     position: absolute;
     bottom: 5%;
     left: 2%;
@@ -115,7 +115,7 @@ section, #form-add-task{
 
 .edit-task{
     position: absolute;
-    bottom: 5%;
-    left: 7%;
+    bottom: 3%;
+    left: 11%;
     cursor: pointer;
 }

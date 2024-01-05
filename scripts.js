@@ -29,7 +29,7 @@ $(document).ready(function(){
     })
     
     function makeTask(text){
-        debugger;
+        //debugger;
         time = new Date();
         // quero o dia e a hora
         time = time.toLocaleString();
@@ -38,8 +38,12 @@ $(document).ready(function(){
         <section class="task-section">
             <p class="text-task">${text}</p>
             <div class="time-task">${time}</div>
-            <div class="trash-task"><img src="svg/trash.svg" alt="trash" title="delete task"></div>
+            <div class="done-task">
+                <input type="checkbox" id="id_done"/>
+                <label for="id_done">Done</label>
+            </div>
             <div class="edit-task"><img src="svg/pencil.svg" alt="edit" title="edit task"></div>
+            
         </section>
         
         `;
@@ -50,7 +54,6 @@ $(document).ready(function(){
 
     function saveTasks(){
         localStorage.setItem('tasks', JSON.stringify(sectionsArray));
-
     }
 
     function loadTasks(){
@@ -61,20 +64,5 @@ $(document).ready(function(){
             $('article').children().first().after(sectionsArray.join(''));
         }
     }
-
-
-    $('article').on('click', '.trash-task', function() {
-        var section = $(this).closest('.task-section');
-        var index = $('.task-section').index(section);
-
-        // Remove a seção do array
-        sectionsArray.splice(index, 1);
-
-        // Atualiza o conteúdo do elemento article
-        $('article').html(sectionsArray.reverse().join(''));
-
-        // Salva as tarefas atualizadas
-        saveTasks();
-    });
     
 })
